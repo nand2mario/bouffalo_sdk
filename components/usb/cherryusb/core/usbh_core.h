@@ -56,7 +56,7 @@ extern "C" {
 
 struct usbh_class_info {
     uint8_t match_flags; /* Used for product specific matches; range is inclusive */
-    uint8_t class;       /* Base device class code */
+    uint8_t class_code;       /* Base device class code */
     uint8_t subclass;    /* Sub-class, depends on base class. Eg. */
     uint8_t protocol;    /* Protocol, depends on base class. Eg. */
     uint16_t vid;        /* Vendor ID (for vendor/product specific devices) */

@@ -501,7 +501,7 @@ const struct usbh_class_driver video_streaming_class_driver = {
 
 CLASS_INFO_DEFINE const struct usbh_class_info video_ctrl_class_info = {
     .match_flags = USB_CLASS_MATCH_INTF_CLASS | USB_CLASS_MATCH_INTF_SUBCLASS | USB_CLASS_MATCH_INTF_PROTOCOL,
-    .class = USB_DEVICE_CLASS_VIDEO,
+    .class_code = USB_DEVICE_CLASS_VIDEO,
     .subclass = VIDEO_SC_VIDEOCONTROL,
     .protocol = VIDEO_PC_PROTOCOL_UNDEFINED,
     .vid = 0x00,
@@ -511,7 +511,7 @@ CLASS_INFO_DEFINE const struct usbh_class_info video_ctrl_class_info = {
 
 CLASS_INFO_DEFINE const struct usbh_class_info video_streaming_class_info = {
     .match_flags = USB_CLASS_MATCH_INTF_CLASS | USB_CLASS_MATCH_INTF_SUBCLASS | USB_CLASS_MATCH_INTF_PROTOCOL,
-    .class = USB_DEVICE_CLASS_VIDEO,
+    .class_code = USB_DEVICE_CLASS_VIDEO,
     .subclass = VIDEO_SC_VIDEOSTREAMING,
     .protocol = VIDEO_PC_PROTOCOL_UNDEFINED,
     .vid = 0x00,

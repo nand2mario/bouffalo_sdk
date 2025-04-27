@@ -742,6 +742,8 @@ static int usbh_reset_port(const uint8_t port)
     volatile uint32_t timeout = 0;
     uint32_t regval;
 
+    printf("usbh_reset_port: %d\n", port);
+
 #if defined(CONFIG_USB_EHCI_HPMICRO) && CONFIG_USB_EHCI_HPMICRO
     if ((*(volatile uint32_t *)(CONFIG_HPM_USBH_BASE + 0x224) & 0xc0) == (2 << 6)) { /* Hardcode for hpm */
         EHCI_HCOR->portsc[port - 1] |= (1 << 29);

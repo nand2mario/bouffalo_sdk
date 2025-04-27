@@ -112,7 +112,7 @@ const struct usbh_class_driver xbox_class_driver = {
 
 CLASS_INFO_DEFINE const struct usbh_class_info xbox_custom_class_info = {
     .match_flags = USB_CLASS_MATCH_INTF_CLASS| USB_CLASS_MATCH_INTF_SUBCLASS | USB_CLASS_MATCH_INTF_PROTOCOL,
-    .class = USB_DEVICE_CLASS_VEND_SPECIFIC,
+    .class_code = USB_DEVICE_CLASS_VEND_SPECIFIC,
     .subclass = 0x5d,
     .protocol = 0x01,
     .vid = 0x00,

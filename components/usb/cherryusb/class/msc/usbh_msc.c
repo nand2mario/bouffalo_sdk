@@ -424,7 +424,7 @@ const struct usbh_class_driver msc_class_driver = {
 
 CLASS_INFO_DEFINE const struct usbh_class_info msc_class_info = {
     .match_flags = USB_CLASS_MATCH_INTF_CLASS | USB_CLASS_MATCH_INTF_SUBCLASS | USB_CLASS_MATCH_INTF_PROTOCOL,
-    .class = USB_DEVICE_CLASS_MASS_STORAGE,
+    .class_code = USB_DEVICE_CLASS_MASS_STORAGE,
     .subclass = MSC_SUBCLASS_SCSI,
     .protocol = MSC_PROTOCOL_BULK_ONLY,
     .vid = 0x00,
